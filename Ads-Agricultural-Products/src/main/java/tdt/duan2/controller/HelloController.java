@@ -9,9 +9,13 @@ public class HelloController {
 
 	@RequestMapping(value = { "/", "/index" })
 	public String index(Model model) {
-		String message="this is the first line1";
+		String message="Successfull!";
 		model.addAttribute("message", message);
 		return ("home");
 	}
-
+	
+	@RequestMapping(value="/test")
+	public String test() {
+		return "home";
+	}
 }
