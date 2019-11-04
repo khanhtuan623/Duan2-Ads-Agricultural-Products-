@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -16,8 +17,9 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
+@Table(name="Intial_Infor")
 @Inheritance(strategy=InheritanceType.JOINED)
-public abstract class BaseEntity {
+public abstract class IntialInforEntity {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -39,7 +41,7 @@ public abstract class BaseEntity {
 	@Column
 	private Date modifyDate;
 
-	@Column
+	@Column(columnDefinition="int default 1")
 	private int status;
 
 	public long getId() {

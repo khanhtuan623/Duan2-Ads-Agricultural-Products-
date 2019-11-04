@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import tdt.duan2.model.Profile;
-import tdt.duan2.services.UserSerivesInterface;
+import tdt.duan2.entity.RoleEntity;
+import tdt.duan2.services.AdminServices;
 
 @RestController
 public class APIController {
 
 	@Autowired
-	private UserSerivesInterface userSerivesInterface;
+	private AdminServices admin;
 	
 	@GetMapping("/api")
 	public String home() {
@@ -23,8 +23,9 @@ public class APIController {
 	}
 	
 	@PostMapping("/new")
-	public Object test(@RequestBody Profile profile) throws ParseException {
-		return userSerivesInterface.updateUser(profile);
+	public RoleEntity test(@RequestBody RoleEntity role) throws ParseException {
+		admin.addRole(role);
+		return role;
 	}
 	
 }

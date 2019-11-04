@@ -8,25 +8,95 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Component;
 
-import tdt.duan2.entity.UserEntity;
-import tdt.duan2.repository.UserRepository;
+import tdt.duan2.entity.RoleEntity;
+import tdt.duan2.repository.RoleRepository;
 
-@Component
-public class UserDao implements UserRepository {
+public class RoleDao implements RoleRepository {
 
 	@Autowired
-	private UserRepository userAction;
-
+	private RoleRepository roleAction;
+	
 	@Override
-	public <S extends UserEntity> S save(S entity) {
+	public List<RoleEntity> findAll() {
 		// TODO Auto-generated method stub
-		return userAction.save(entity);
+		return null;
 	}
 
 	@Override
-	public Optional<UserEntity> findById(Long id) {
+	public List<RoleEntity> findAll(Sort sort) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<RoleEntity> findAllById(Iterable<Long> ids) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <S extends RoleEntity> List<S> saveAll(Iterable<S> entities) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void flush() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public <S extends RoleEntity> S saveAndFlush(S entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteInBatch(Iterable<RoleEntity> entities) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAllInBatch() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public RoleEntity getOne(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <S extends RoleEntity> List<S> findAll(Example<S> example) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <S extends RoleEntity> List<S> findAll(Example<S> example, Sort sort) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Page<RoleEntity> findAll(Pageable pageable) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public <S extends RoleEntity> S save(S entity) {
+		// TODO Auto-generated method stub
+		return roleAction.save(entity);
+	}
+
+	@Override
+	public Optional<RoleEntity> findById(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -50,13 +120,13 @@ public class UserDao implements UserRepository {
 	}
 
 	@Override
-	public void delete(UserEntity entity) {
+	public void delete(RoleEntity entity) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteAll(Iterable<? extends UserEntity> entities) {
+	public void deleteAll(Iterable<? extends RoleEntity> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -68,98 +138,27 @@ public class UserDao implements UserRepository {
 	}
 
 	@Override
-	public List<UserEntity> findAll() {
+	public <S extends RoleEntity> Optional<S> findOne(Example<S> example) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<UserEntity> findAll(Sort sort) {
+	public <S extends RoleEntity> Page<S> findAll(Example<S> example, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<UserEntity> findAllById(Iterable<Long> ids) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends UserEntity> List<S> saveAll(Iterable<S> entities) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void flush() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public <S extends UserEntity> S saveAndFlush(S entity) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void deleteInBatch(Iterable<UserEntity> entities) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void deleteAllInBatch() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public UserEntity getOne(Long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends UserEntity> List<S> findAll(Example<S> example) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends UserEntity> List<S> findAll(Example<S> example, Sort sort) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Page<UserEntity> findAll(Pageable pageable) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends UserEntity> Optional<S> findOne(Example<S> example) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends UserEntity> Page<S> findAll(Example<S> example, Pageable pageable) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public <S extends UserEntity> long count(Example<S> example) {
+	public <S extends RoleEntity> long count(Example<S> example) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public <S extends UserEntity> boolean exists(Example<S> example) {
+	public <S extends RoleEntity> boolean exists(Example<S> example) {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 }
